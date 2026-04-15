@@ -483,6 +483,30 @@ h1, h2, h3 {
   opacity: 0.9;
 }
 
+/* =========================
+   FLIP FIX MOBILE
+========================= */
+@media (max-width: 768px) {
+  .flip-card {
+    height: auto; /* 👈 importante */
+  }
+  .flip-card-inner {
+    transform: none !important;
+  }
+  .flip-card-front,
+  .flip-card-back {
+    position: relative;
+    transform: none;
+    height: auto;
+  }
+  .flip-card-back {
+    margin-top: 15px;
+  }
+  /* Opcional: mejorar spacing */
+  .flip-card-front {
+    margin-bottom: 10px;
+  }
+}
 .projects {
   background: var(--bs-light);
   color: #fff;
